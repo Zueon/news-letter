@@ -34,10 +34,10 @@ app.post('/', (req, res) => {
   };
   const jsonData = JSON.stringify(data);
 
-  const url = 'https://us12.api.mailchimp.com/3.0/lists/a83005870f';
+  const url = 'https://us12.api.mailchimp.com/3.0/lists/{list_id}';
   const options = {
     method: 'POST',
-    auth: 'jueon:b163179c6b5edc657050d6e1ab325fde-us12',
+    auth: 'jueon:API_KEY',
   };
 
   const request = https.request(url, options, (response) => {
